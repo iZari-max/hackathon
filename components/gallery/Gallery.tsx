@@ -69,7 +69,7 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-      <Link href="/pages/products" className='flex mx-auto mt-20'><button className="flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Discover More</button></Link>
+      <Link href="/products" className='flex mx-auto mt-20'><button className="flex text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Discover More</button></Link>
     </div>
   </div>
 </section>

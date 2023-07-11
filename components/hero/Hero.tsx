@@ -1,5 +1,6 @@
 import React from 'react'
 import { ShoppingCart } from "lucide-react";
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -11,13 +12,13 @@ export default function Hero() {
       </h1>
       <p className="mb-8 leading-relaxed">VistaVision takes virtual reality to a whole new level, offering an unparalleled immersive experience that transports you to limitless worlds right from the comfort of your living room. With cutting-edge technology and stunning visuals, VistaVision VR Glasses redefine the way you perceive and interact with virtual environments.
       </p>
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">See Details</button>
         <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">More Products</button>
-      </div>
+      </div> */}
     </div>
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img className="object-cover object-center rounded" alt="hero" src="/heroImage.png" />
+      <Image className="object-cover object-center rounded" alt="hero" src={"/heroImage.png"} width={500} height={500}/>
     </div>
   </div>
 </section>
