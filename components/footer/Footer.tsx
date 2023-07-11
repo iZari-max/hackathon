@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -6,9 +7,9 @@ export default function Footer() {
     <footer className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <img src="/logoHeader.png" alt="footer Logo" className='w-[170px]' />
-      </a>
+      <Link href={"/"} className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <Image width={500} height={350} src="/logoHeader.png" alt="footer Logo" className='w-[170px]' />
+      </Link>
       <p className="mt-2 text-sm text-gray-500">TechFreaks is an online store front that sell all tech related products.</p>
     </div>
     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
