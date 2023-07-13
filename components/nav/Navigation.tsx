@@ -22,9 +22,13 @@ export default function Navigation() {
       <Link href={"/accessories"} className="mr-5 hover:text-sky-500">ACCESSORIES</Link>
 
     </nav>
-    <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-        <ShoppingCart className="mr-2 h-5 w-5" /> Start Shopping
+    <div className='relative'>
+    <button className="inline-flex items-center hover:bg-gray-100 border-0 py-1 pl-6 focus:outline-non rounded text-base mt-4 md:mt-0 ">
+    
+    <ShoppingCart className="mr-2 h-5 w-5 relative" />
+    <span className='text-white rounded-full w-6 h-6 bg-red-600 absolute top-0 left-0'>0</span>
     </button>
+    </div>
   </div>
     </div>
   )

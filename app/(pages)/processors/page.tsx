@@ -57,7 +57,7 @@ export default async function page() {
             item.category.title == 'Processors' &&
               <div key={item._id} className="flex flex-col justify-between border-2 border-gray-200 gap-y-2 p-4 w-full h-[500px] cursor-pointer hover:shadow-2 hover:shadow-sky-500 hover:shadow-md">
               <div>
-              <Link href={""} className="block relative h-84 rounded overflow-hidden">
+              <Link href={`/productDetails/${item._id}`} className="block relative h-84 rounded overflow-hidden">
                 <Image alt="ecommerce" className="object-contain object-center w-full h-[200px]  " width={500} height={500} src={urlForImage(item.image).url()} />
               </Link>
               </div>
