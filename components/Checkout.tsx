@@ -59,8 +59,8 @@ console.log(data.session)
 
   return (
     <div>
-      <button className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600" onClick={handleCheckout}>
-        Checkout
+      <button className="px-6 py-2 border rounded-md hover:bg-sky-400 hover:text-white border-violet-400" onClick={handleCheckout}>
+      <span className="sr-only sm:not-sr-only">Continue to </span>Checkout
       </button>
      
     </div>

@@ -15,7 +15,7 @@ export default function Navigation() {
   <div className="container mx-auto flex flex-wrap p-5 gap-x-6 flex-row  items-center">
     <button className=' md:block lg:hidden'><IoMenu/></button>
     <Link href='/' className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <img src="/logoHeader.png" alt="logo header" className='w-[120px]' />
+      <Image src="/logoHeader.png" width={500} height={500} alt="logo header" className='w-[120px]' />
     </Link>
     <nav className="hidden  md:ml-auto md:mr-auto gap-x-6 lg:flex flex-wrap items-center text-base justify-center font-semibold text-gray-500">
       <Link href={"/products"} className=" hover:text-sky-500 hover:border-b-2 hover:border-black/[.70] focus:border-b-2 focus:border-black/[.50] focus:text-sky-500">TECHS</Link>

@@ -49,7 +49,7 @@ export default async function Gallery() {
       data.map((item) =>(
       
       count < 6 &&
-    <div className="flex relative">
+    <div className="flex relative" key={item._id}>
           <Image width={500} height={350} alt="gallery" className="absolute inset-0 w-full h-full object-contain object-center border-2 border-gray-200 p-6" src={urlForImage(item.image).url()} />
           <div className="px-8 h-[330px] py-10 relative z-1 w-full border-4 border-gray-200 bg-white/[.95] opacity-0 hover:opacity-100">
 
