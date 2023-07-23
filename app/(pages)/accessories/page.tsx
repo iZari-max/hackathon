@@ -1,11 +1,11 @@
 
 import React from 'react'
 import { client } from '@/sanity/lib/client'
-import { Image as IImage } from 'sanity'
 import { urlForImage } from '@/sanity/lib/image'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { ProductT } from '@/interfaces'
+import { AddToCartButton } from '@/components/AddToCartButton'
 
 const getData = async () => {
   const res = await client.fetch(`*[_type == 'product' ]
@@ -26,16 +26,16 @@ const getData = async () => {
 
 }
 
-interface ProductT {
-  title: string,
-  _id: string,
-  price: number,
-  image: IImage,
-  description: string,
-  category: {
-    title: string
-  }
-}
+// interface ProductT {
+//   title: string,
+//   _id: string,
+//   price: number,
+//   image: IImage,
+//   description: string,
+//   category: {
+//     title: string
+//   }
+// }
 
 
 export default async function page() {
@@ -57,7 +57,7 @@ export default async function page() {
               <div key={item._id} className="flex flex-col justify-between border-2 border-gray-200 gap-y-2 p-4 w-full h-[500px] cursor-pointer hover:shadow-2 hover:shadow-sky-500 hover:shadow-md">
               <div>
               <Link href={`/productDetails/${item._id}`} className="block relative h-84 rounded overflow-hidden">
-                <Image alt="ecommerce" className="object-contain object-center w-full h-[200px]  " width={500} height={500} src={urlForImage(item.image).url()} />
+                <Image alt="ecommerce" className="object-contain object-center w-full h-[200px] hover:scale-105 " width={500} height={500} src={urlForImage(item.image).url()} />
               </Link>
               </div>
               <div className="flex flex-col mt-4">
@@ -67,7 +67,13 @@ export default async function page() {
                     <h2 className="text-gray-900 title-font text-lg font-medium">{item.title}</h2>
                     <p className="mt-1 text-gray-900">PKR {item.price}</p>
                   </div>
-                  <p className="mt-3 overflow-y-hidden">{item.description}</p>
+                  <p className="mt-3  line-clamp-4">{item.description}</p>
+                </div>
+                <div className='flex justify-around items-center py-4'>
+                  <Link href={`/productDetails/${item._id}`} className='py-1 px-2 text-gray-800 border-2 border-sky-500 rounded-md hover:bg-gray-100'>
+                    Preview
+                  </Link>
+                  <AddToCartButton product={item}/>
                 </div>
 
                 {/* <div className=''>
