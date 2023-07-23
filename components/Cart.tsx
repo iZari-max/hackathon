@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { Checkout } from '@/components/Checkout'
 import { CartItem } from '@/interfaces'
 
-export default function page() {
+const Cart = () => {
   const cartItems = useAppSelector(state => state.cart.cartItems) || undefined
   const total = useAppSelector(totalPriceSelector)
   return (
@@ -46,3 +46,4 @@ export default function page() {
     </div>
   )
 }
+export default Cart
