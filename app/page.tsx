@@ -7,7 +7,7 @@ export default function Home() {
   <>
   <div className=' max-h-full'>
   <Hero/>
-  <Gallery />
+  {/* <Gallery /> */}
   </div>
   </>
   ) 
