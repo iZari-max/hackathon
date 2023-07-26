@@ -5,11 +5,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IoMenu } from "react-icons/io5"
 import CartButton from '../CartButton';
-
+import { useAuth, useUser } from '@clerk/nextjs';
+import { SignOutButton } from "@clerk/nextjs";
 
 
 
 export default function Navigation() {
+
+  const { isLoaded, userId, sessionId, getToken } = useAuth();
+  const {user} = useUser(); 
+
   return (
     <div className="text-gray-600 body-font sticky top-0 bg-white z-10 shadow-sm shadow-gray-200">
   <div className="container mx-auto flex flex-wrap p-5 gap-x-6 flex-row  items-center">
@@ -27,12 +32,19 @@ export default function Navigation() {
 
     </nav>
     <div className='flex gap-x-4'>
+      { !isLoaded || !userId ? 
       <button className='font-semibold border-2 px-4 py-1 hidden lg:block border-gray-200 rounded-full hover:bg-sky-500 hover:text-white'>
         Sign In
+      </button> :
+      <div className='flex gap-x-4'>
+        <Image src={``} width={500} height={500} alt='userProfile' className='rounded-full w-10 h-10 object-cover object-center'></Image>
+        <button className='font-semibold border-2 px-4 py-1 hidden lg:block border-gray-200 rounded-full hover:bg-sky-500 hover:text-white'>
+        <SignOutButton/>
       </button>
-      <div className=''>
-        <Image src={"/heroImage.jpg"} width={500} height={500} alt='userProfile' className='rounded-full w-10 h-10 object-cover object-center'></Image>
       </div>
+      
+      }
+
     </div>
     {/* <div className='relative'>
     <button className="inline-flex items-center hover:bg-gray-100 border-0 py-1 pl-6 focus:outline-non rounded text-base mt-4 md:mt-0">

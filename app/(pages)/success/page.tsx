@@ -3,8 +3,15 @@ import Link from 'next/link'
 import React from 'react'
 import animateData from "@/public/successfulPurchase.json"
 import Lottie from "lottie-react";
+import clear from '@/components/Clear';
+
+
+
+
 
 export default function page() {
+
+  clear()
   return (
     <div>
       <div className='px-8 p-24 flex flex-col gap-16 justify-center items-center '>
