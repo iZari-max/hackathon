@@ -3,9 +3,9 @@ import { useAppDispatch } from "@/store/store"
 
 
 
-const clear = ()=>{
+const Clear = ()=>{
 const dispatch = useAppDispatch()
 
     dispatch(clearCart())
 }
-export default clear
+export default Clear
