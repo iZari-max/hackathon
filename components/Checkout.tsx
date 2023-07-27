@@ -36,7 +36,7 @@ export const Checkout = ({cartItem}:Props) => {
         body: JSON.stringify(products),
       });
 
-      console.log("products ", products);
+      
       
 
       if (!response.ok) {

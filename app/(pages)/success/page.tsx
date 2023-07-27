@@ -2,9 +2,8 @@
 import Link from 'next/link'
 import React from 'react'
 import animateData from "@/public/successfulPurchase.json"
-import Lottie from "lottie-react";
 import Clear from '@/components/Clear';
-
+import { Player } from '@lottiefiles/react-lottie-player';
 
 
 
@@ -16,8 +15,13 @@ export default function page() {
     <div>
       <div className='px-8 p-24 flex flex-col gap-16 justify-center items-center '>
       <div className='w-48'>
-      <Lottie animationData={animateData
-        } loop={true} />
+      <Player
+  autoplay
+  loop
+  src={animateData}
+  style={{ height: '250px', width: '250px' }}
+>
+</Player>
       </div>
         <span className='text-4xl font-bold flex gap-x-4 text-gray-600'>
         
