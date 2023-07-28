@@ -24,7 +24,7 @@ const Cart = () => {
           <div className='w-full lg:w-1/2  lg:h-96 lg:overflow-y-scroll thin-scrollbar lg:scroll-smooth lg:my-24 lg:mx-16'>
             {
               cartItems.map((item: CartItem) => (
-                <div>
+                <div key={item.product._id}>
                   <CartItemCards key={item.product._id} cartItem={item} />
                   <hr />
                 </div>
