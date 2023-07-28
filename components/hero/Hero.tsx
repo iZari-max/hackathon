@@ -15,7 +15,7 @@ export default function Hero() {
       </p>
       <div className="flex justify-center">
         {/* <button className="inline-flex text-white bg-sky-500 border-0 py-2 px-6 focus:outline-none hover:bg-sky-600 rounded text-lg">See Details</button> */}
-        <Link href="/products" className='flex mx-auto'><button className="flex text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-sky-600 rounded text-lg">Shop here</button></Link>
+        <Link href="/products" className='flex mx-auto'><button className="flex text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-sky-400 rounded text-lg">Shop here</button></Link>
 
       </div>
     </div>
